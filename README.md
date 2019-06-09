@@ -11,8 +11,8 @@ gcc DecMulTimeMeasure.c decContext.c decDouble.c decQuad.c -o Example_test_gem5
 
 
 The program takes input of two operand form the text file form 
-1.    "final_result_a.txt"
-2.	   "final_result_b.txt"
+1.final_result_a.txt
+2.final_result_b.txt
 	
 and write the executation time in output.txt and Moutput.txt
 
