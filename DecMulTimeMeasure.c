@@ -35,8 +35,8 @@ int main(int argc, char *argv[]) {
 	
 	//-------------replace file name here -------------------
 
-	    char fileNameA [40] = "final_result_a.txt";
-		char fileNameB [40] = "final_result_b.txt";
+	   // char fileNameA [40] =argv[1];// "final_result_a.txt";
+	   // char fileNameB [40] =argv[1];// "final_result_b.txt";
 	
         //-----------------------------------------------------   
 
@@ -45,18 +45,18 @@ printf("GEM5 SIMULATION START");
 
 
 
-        ptr_file_read = fopen(fileNameA, "r"); //Name of the input file
+        ptr_file_read = fopen(argv[1], "r"); //Name of the input file
 	
 	if (!ptr_file_read)
 	{ 
 		printf("problem reading inputA.txt file");
-	    return 1;
+	   // return 1;
 	}
-	ptr_file_readB = fopen(fileNameB, "r"); //Name of the input file
+	ptr_file_readB = fopen(argv[1], "r"); //Name of the input file
 	if (!ptr_file_read)
 	{
 		printf("problem reading inputB.txt");
-		return 1;
+	//	return 1;
 	}
 
 	ptr_file_write = fopen("output.txt", "a+");
@@ -103,7 +103,7 @@ printf("GEM5 SIMULATION START");
     int c1 = 0;
     
  
-    for (c1 = 0 ; c1<2000;c1++) //input loop changing input
+    for (c1 = 0 ; c1<3;c1++) //input loop changing input
 	{
 	    
 		int i = 0;
@@ -111,7 +111,7 @@ printf("GEM5 SIMULATION START");
 			decDoubleFromString(&b, multiplaier[c1], &set);
 			temp1 = a; temp2 = b; 
 			begin_decimal = clock();
-			for(int m=0;m<500000;m++) //doing the same operation repet
+			for(int m=0;m<50;m++) //doing the same operation repet
 			{ 
 				a = temp1; b = temp2;
 				decDoubleMultiply(&a, &a, &b, &set);    // a=aXb
@@ -142,7 +142,7 @@ printf("GEM5 SIMULATION START");
 
   int c2 = 0;
 
-  for (c2 = 0 ; c2<2000;c2++)
+  for (c2 = 0 ; c2<2;c2++)
 	{
 	    
 	  int i = 0;
@@ -150,7 +150,7 @@ printf("GEM5 SIMULATION START");
 	  decDoubleFromString(&d, multiplicand[c2 + 1], &set);
 	  temp1 = c; temp2 = d;
 	  begin_modify = clock();
-	  for (int m = 0; m<500000; m++) //doing the same operation repet
+	  for (int m = 0; m<50; m++) //doing the same operation repet
 	  {
 		  c = temp1; d = temp2;
 		  MdecDoubleMultiply(&c, &c, &d, &set);    // a=aXb
