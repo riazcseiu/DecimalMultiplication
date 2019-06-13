@@ -16,7 +16,7 @@
 #include <time.h>
 #include <string.h>
 
-int main() {
+int main(int argc, char *argv[]) {
 	decDouble a, b , c,d, temp1,temp2;                 // working numbers 64 bit format
 	decContext set;                  // working context
 
