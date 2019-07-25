@@ -16,10 +16,6 @@ The program takes input of two operand form the text file form
 	
 and write the executation time in output.txt and Moutput.txt
 
-Error Message during execution in GEM-5
-GEM5 SIMULATION START problem reading inputA.txt file 
-Exiting @ tick 9053500 because exiting with last active thread context Simulated exit 
-code not 0! Exit code is 1
 
-I use following command
+Use following command fro GEM -5 Executation
 ./build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/Example_test_gem5
